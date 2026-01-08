@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"></div>
+
+    <script>
+        const area = document.getElementById("area");
+
+        // Style du fond
+        area.style.width = "100%";
+        area.style.height = "100vh";
+        area.style.position = "relative";
+        area.style.overflow = "hidden";
+        area.style.background = "linear-gradient(to left, #8f94fb, #4e54c8)";
+
+        // Configuration des cercles (équivalent nth-child)
+        const circlesConfig = [
+          { left: "25%", size: 80, delay: 0, duration: 25 },
+          { left: "10%", size: 20, delay: 2, duration: 12 },
+          { left: "70%", size: 20, delay: 4, duration: 25 },
+          { left: "40%", size: 60, delay: 0, duration: 18 },
+          { left: "65%", size: 20, delay: 0, duration: 25 },
+          { left: "75%", size: 110, delay: 3, duration: 25 },
+          { left: "35%", size: 150, delay: 7, duration: 25 },
+          { left: "50%", size: 25, delay: 15, duration: 45 },
+          { left: "20%", size: 15, delay: 2, duration: 35 },
+          { left: "85%", size: 150, delay: 0, duration: 11 },
+        ];
+
+        circlesConfig.forEach(config => {
+          const circle = document.createElement("div");
+
+          circle.style.position = "absolute";
+          circle.style.bottom = "-150px";
+          circle.style.left = config.left;
+          circle.style.width = config.size + "px";
+          circle.style.height = config.size + "px";
+          circle.style.background = "rgba(255,255,255,0.2)";
+          circle.style.borderRadius = "0";
+          circle.style.animation = `float ${config.duration}s linear infinite`;
+          circle.style.animationDelay = config.delay + "s";
+
+          area.appendChild(circle);
+        });
+
+        // Injection de l'animation CSS via JS
+        const style = document.createElement("style");
+        style.innerHTML = `
+        @keyframes float {
+          0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 1;
+            border-radius: 0;
+          }
+          100% {
+            transform: translateY(-1000px) rotate(720deg);
+            opacity: 0;
+            border-radius: 50%;
+          }
+        }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
