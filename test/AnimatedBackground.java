@@ -1,9 +1,9 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import javax.swing.*;
 
 public class AnimatedBackground extends JFrame {
 
