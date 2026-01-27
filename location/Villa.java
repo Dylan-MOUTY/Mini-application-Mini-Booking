@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Villa extends Hebergement {
 
     private double prixSemaine;
@@ -8,8 +11,10 @@ public class Villa extends Hebergement {
     }
 
     @Override
-    public double calculerPrix(Date debut, Date fin, int nbPersonnes) {
-        return prixSemaine + (nbPersonnes * 50);
+    public double calculerPrix(LocalDate debut, LocalDate fin, int nbPersonnes) {
+        long jours = ChronoUnit.DAYS.between(debut, fin);
+        double base = prixSemaine * Math.ceil(jours / 7.0);
+        return base + (nbPersonnes * 50);
     }
 
     @Override
