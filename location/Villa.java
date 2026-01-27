@@ -1,3 +1,6 @@
+package location;
+
+import hebergement.Hebergement;
 import java.util.Date;
 
 public class Villa extends Hebergement {

@@ -1,3 +1,6 @@
+import location.*;
+import hebergement.*;
+import Utilisateurs.*;
 import java.util.*;
 
 public class Main {

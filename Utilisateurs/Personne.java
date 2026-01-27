@@ -1,3 +1,5 @@
+package Utilisateurs;
+
 public abstract class Personne {
 
     protected String nom;
@@ -22,6 +24,5 @@ public abstract class Personne {
         return email;
     }
 
-    // Méthode abstraite
     public abstract String getTypePersonne();
 }

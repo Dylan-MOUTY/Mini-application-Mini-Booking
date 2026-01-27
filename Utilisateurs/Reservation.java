@@ -1,3 +1,6 @@
+package Utilisateurs;
+
+import location.Reservable;
 import java.util.Date;
 
 public class Reservation {

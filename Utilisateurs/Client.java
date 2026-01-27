@@ -1,3 +1,6 @@
+package Utilisateurs;
+
+import location.Reservable;
 import java.util.*;
 
 public abstract class Client extends Personne {

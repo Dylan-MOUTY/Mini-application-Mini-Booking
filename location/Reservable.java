@@ -1,3 +1,6 @@
+package location;
+
+import Utilisateurs.Client;
 import java.util.Date;
 
 public interface Reservable {

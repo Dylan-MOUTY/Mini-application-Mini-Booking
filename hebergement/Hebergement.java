@@ -1,3 +1,7 @@
+package hebergement;
+
+import location.Reservable;
+import Utilisateurs.Client;
 import java.util.Date;
 
 public abstract class Hebergement implements Reservable {

@@ -1,3 +1,5 @@
+package Utilisateurs;
+
 public class NouveauClient extends Client {
 
     private String motDePasse;
