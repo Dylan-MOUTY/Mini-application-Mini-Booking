@@ -4,12 +4,9 @@ public abstract class Personne {
 
     protected String nom;
     protected String prenom;
-    protected String email;
-
-    public Personne(String nom, String prenom, String email) {
+    public Personne(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
-        this.email = email;
     }
 
     public String getNom() {
@@ -18,10 +15,6 @@ public abstract class Personne {
 
     public String getPrenom() {
         return prenom;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     public abstract String getTypePersonne();

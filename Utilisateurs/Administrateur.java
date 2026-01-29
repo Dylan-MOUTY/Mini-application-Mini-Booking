@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Administrateur extends Personne {
 
-    public Administrateur(String nom, String prenom, String email) {
-        super(nom, prenom, email);
+    public Administrateur(String nom, String prenom) {
+        super(nom, prenom);
     }
 
     public void ajouterHebergement(List<Reservable> hebergements, Reservable r) {
